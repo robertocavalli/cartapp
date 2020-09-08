@@ -1,0 +1,9 @@
+{
+    "name": "Translation",
+    "alias": "translation",
+    "description": "Module containing all FleetCart translations",
+    "order": 1,
+    "providers": [
+        "Modules\\Translation\\Providers\\TranslationServiceProvider"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "fleetcart/support",
+    "description": "The FleetCart Support Module.",
+    "authors": [
+        {
+            "name": "Mehedi Hassan",
+            "email": "MehediDracula@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "mehedi/laravel-captcha": "^3.1",
+        "instamojo/instamojo-php": "^0.4",
+        "spatie/once": "^2.1",
+        "spatie/schema-org": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Support\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

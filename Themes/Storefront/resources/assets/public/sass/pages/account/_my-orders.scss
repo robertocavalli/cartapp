@@ -1,0 +1,79 @@
+.my-orders-table {
+	margin-bottom: 5px;
+
+	thead {
+		th {
+            white-space: nowrap;
+		}
+	}
+
+	tbody {
+		tr {
+			&:first-child {
+				td {
+					padding-top: 30px;
+				}
+			}
+		}
+
+		td {
+            white-space: nowrap;
+
+			&:first-child {
+				font-weight: 500;
+			}
+
+			&:nth-child(2) {
+				color: $color-gray;
+			}
+
+            &:nth-child(4) {
+                font-weight: 500;
+            }
+		}
+	}
+
+	.product-price {
+        color: $color-black;
+	}
+
+	.badge {
+		margin-top: -6px;
+	}
+
+	.btn-view {
+		margin-top: -2px;
+		padding: 0;
+		letter-spacing: 2px;
+
+		&:hover {
+			color: $color-default;
+            color: var(--color-primary);
+		}
+
+		> i {
+			margin-right: 7px;
+		}
+	}
+}
+
+.user-info {
+	padding: 23px 30px;
+
+	li {
+		display: flex;
+		line-height: 24px;
+		padding: 11px 0;
+		color: $color-gray;
+
+		> i {
+			font-size: 24px;
+			margin-right: 8px;
+			vertical-align: top;
+		}
+
+		> span {
+			word-break: break-all;
+		}
+	}
+}

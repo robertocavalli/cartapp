@@ -1,0 +1,55 @@
+.checkout-left {
+    padding-right: 15px;
+}
+
+.checkout-form {
+    .account-details {
+        margin-bottom: 14px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $border-color-lite;
+    }
+
+    .create-an-account-form {
+        .helper-text {
+            font-size: 14px;
+            display: block;
+            margin: -4px 0 14px;
+            color: $color-gray;
+        }
+    }
+
+    .create-an-account-label,
+    .ship-to-different-address-label {
+        margin: 4px 0 7px;
+
+        label {
+            color: $color-black;
+        }
+    }
+
+    .ship-to-different-address-form {
+        padding-top: 14px;
+    }
+
+    .order-notes {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .checkout-form {
+        .order-notes {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .checkout-left {
+        padding-right: 0;
+    }
+}

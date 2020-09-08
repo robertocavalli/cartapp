@@ -1,0 +1,76 @@
+{
+    "name": "envaysoft/fleetcart",
+    "description": "The FleetCart E-Commerce System.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Mehedi Hassan",
+            "email": "MehediDracula@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "doctrine/dbal": "^2.10",
+        "fideloper/proxy": "^4.0",
+        "fzaninotto/faker": "~1.4",
+        "jackiedo/dotenv-editor": "^1.0",
+        "laravel/framework": "^7.0",
+        "laravel/helpers": "^1.1",
+        "laravel/tinker": "^2.0",
+        "mehedi/stylist": "^1.0",
+        "nwidart/laravel-modules": "^6.0",
+        "swayok/alternative-laravel-cache": "^5.4",
+        "symfony/intl": "^5.0",
+        "wikimedia/composer-merge-plugin": "^1.4"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.0",
+        "beyondcode/laravel-dump-server": "^1.0",
+        "beyondcode/laravel-query-detector": "^1.0",
+        "facade/ignition": "^2.0",
+        "nunomaduro/collision": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "FleetCart\\": "app/",
+            "Modules\\": "Modules/",
+            "Themes\\": "Themes/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "platform": {
+            "php": "7.2.5"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "nwidart/laravel-modules"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "merge-plugin": {
+            "require": [
+                "Modules/*/composer.json",
+                "Themes/*/composer.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true
+        }
+    }
+}
